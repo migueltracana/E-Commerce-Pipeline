@@ -1,0 +1,32 @@
+2025-10-24 10:31:02,268 - INFO - === DATA VALIDATION STARTED ===
+2025-10-24 10:31:02,276 - INFO - 
+🔍 Validating customers.csv (1000 records)
+2025-10-24 10:31:02,277 - INFO - [customers.csv] ✅ No null values detected.
+2025-10-24 10:31:02,280 - INFO - [customers.csv] ✅ All email formats valid.
+2025-10-24 10:31:02,281 - INFO - [customers.csv] ✅ All dates valid in 'registration_date'.
+2025-10-24 10:31:02,283 - INFO - 
+🔍 Validating products.csv (500 records)
+2025-10-24 10:31:02,283 - INFO - [products.csv] ✅ No null values detected.
+2025-10-24 10:31:02,284 - INFO - [products.csv] ✅ All prices are positive.
+2025-10-24 10:31:02,289 - INFO - 
+🔍 Validating transactions.csv (5000 records)
+2025-10-24 10:31:02,289 - INFO - [transactions.csv] ✅ No null values detected.
+2025-10-24 10:31:02,291 - INFO - [transactions.csv] ✅ All dates valid in 'timestamp'.
+2025-10-24 10:31:02,291 - INFO - === DATA VALIDATION COMPLETED ===
+
+2025-10-24 21:37:30,348 - INFO - === DATA VALIDATION STARTED ===
+2025-10-24 21:37:30,350 - INFO - 
+🔍 Validating products.csv (500 records)
+2025-10-24 21:37:30,353 - INFO - [products.csv] ✅ No null values detected.
+2025-10-24 21:37:30,355 - INFO - [products.csv] ✅ All prices are positive.
+2025-10-24 21:37:30,358 - INFO - 
+🔍 Validating customers.csv (1000 records)
+2025-10-24 21:37:30,358 - INFO - [customers.csv] ✅ No null values detected.
+2025-10-24 21:37:30,359 - INFO - [customers.csv] ✅ All email formats valid.
+2025-10-24 21:37:30,360 - INFO - [customers.csv] ✅ All dates valid in 'registration_date'.
+2025-10-24 21:37:30,363 - INFO - 
+🔍 Validating transactions.csv (5000 records)
+2025-10-24 21:37:30,364 - INFO - [transactions.csv] ✅ No null values detected.
+2025-10-24 21:37:30,365 - INFO - [transactions.csv] ✅ All dates valid in 'timestamp'.
+2025-10-24 21:37:30,365 - INFO - === DATA VALIDATION COMPLETED ===
+

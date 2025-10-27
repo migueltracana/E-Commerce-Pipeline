@@ -1,0 +1,12 @@
+database:
+  user: "prod_user"
+  password: "${DB_PASSWORD}"
+  host: "prod-db-host"
+  port: 5432
+  name: "shopflow_db"
+
+aws:
+  access_key: "${AWS_ACCESS_KEY}"
+  secret_key: "${AWS_SECRET_KEY}"
+  region: "us-east-1"
+  bucket: "prod-shopflow-bucket"
