@@ -1,0 +1,46 @@
+name: 📦 Build Release Package
+
+on:
+  release:
+    types: [created] 
+
+jobs:
+  build:
+    name: 🧩 Build & Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧩 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: ⚙️ Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🧼 Linting (Black & Pylint)
+        run: |
+          pip install black pylint
+          black --check .
+          pylint src --exit-zero
+
+      - name: 🧪 Run tests
+        run: |
+          pip install pytest
+          pytest --maxfail=1 --disable-warnings -q
+
+      - name: 📦 Create ZIP package
+        run: |
+          mkdir -p build
+          zip -r build/shopflow-pipeline-${{ github.event.release.tag_name }}.zip \
+            src sql requirements.txt Dockerfile README.md
+
+      - name: 📤 Upload ZIP to release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/shopflow-pipeline-${{ github.event.release.tag_name }}.zip
