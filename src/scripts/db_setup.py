@@ -14,7 +14,6 @@ DB_URL = (
     f"postgresql+psycopg2://{db_conf['user']}:{db_conf['password']}@"
     f"{db_conf['host']}:{db_conf['port']}/{db_conf['name']}"
 )
-
 # ---------- Initialize Engine and Base ----------
 engine = create_engine(DB_URL, echo=False)
 Base = declarative_base()

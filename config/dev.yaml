@@ -1,9 +1,9 @@
 database:
   user: "postgres"
   password: "postgres"
-  host: "localhost"
+  host: "shopflow-ctw04526-db.cpo4k6euqs4p.eu-central-1.rds.amazonaws.com"
   port: 5432
-  name: "shopflow"
+  name: "postgres"
 
 aws:
   region: "eu-central-1"
